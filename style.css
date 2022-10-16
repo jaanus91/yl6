@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*
+font-family: 'PT Sans', sans-serif;
+font-family: 'PT Serif', serif;
+*/
+
+section, div {
+    padding: 15px;
+}
+
+hr {
+    padding-top: 20px;
+}
+
+h3 { 
+    font-family: 'PT Serif', serif;
+    font-size: 18px;
+    margin: 2px;    
+}
+
+.box {
+    padding: 5px;
+    margin-left: 20px;
+}
+
+p, label, form {
+    font-family: 'PT Serif', serif;
+    font-size: 14px;
+    margin: 2px;
+}
+
+#form {
+    font-family: 'PT Serif', serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-field label {
+  display: inline-block;
+  width: 115px;
+  text-align: right;
+}
+
+#dropdown {
+    margin-left: 30px;
+    padding: 5px;
+}
+
+.hind {
+    float: right;
+}
+
+#calc {
+    margin-left: 25px;
+}
+
+#clock {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: 'PT Serif', serif;
+    letter-spacing: 3px;
+}
+
+input[type=submit] {
+    background-color: #008000;
+    color: #FFF;
+    border-radius: 15px;
+    border: none;
+    font-family: 'PT Serif', serif;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#map {
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    margin: auto;
+}
+
+
+/*Minu looming*/
+/*tehtud https://www.w3schools.com/howto/howto_css_custom_checkbox.asp järgi*/
+
+/*kaota browseri default nupp*/
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+/*nupu üldine kujundus*/
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+}
+
+/*radionupp enne vajutust*/
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+/*vajutatud radionupp ehk nupusisu*/
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #182b91;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+/*state järgi kas näita või ära näita nupusisu opacity abil ainult peale vajutust*/
+/*kaota nupusisu (siis kui not checked peale nupuvajutust)*/
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+/*näita nupusisu (siis kui checked peale nupuvajutust)*/
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+

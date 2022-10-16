@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <section id="section1">
+                <h3>1. osa: Kell</h3>
+                <div id="clock"></div>
+            </section>
+            <hr>
+            <section id="section2">
+                <h3>2. osa: Vormid</h3>
+                <form id="form">
+                    <!-- input field --->
+                    <div id="input-fields">
+                        <div id="first-name">
+                            <label for="fname">Eesnimi:</label>
+                            <input type="text" id="fname" name="fname">
+                        </div>
+                        <div id="last-name">
+                            <label for="lname">Perekonnanimi:</label>
+                            <input type="text" id="lname" name="lname">
+                        </div>
+                    </div>
+                    <!-- checkbox --->
+                    <div id="form-checkbox">
+                        <div class="box">
+                            <input type="checkbox" id="v1" name="v1" value="present">
+                            <label for="v1"> See on kingitus</label> <!-- 5€ --->
+                        </div>
+                        <div class="box">
+                            <input type="checkbox" id="v2" name="v2" value="contactless">
+                            <label for="v2"> Soovin kontaktivaba tarnet</label> <!-- 1€ --->
+                        </div>
+                    </div>
+                    <!-- dropdown --->
+                    <div id="dropdown">
+                        <label for="linn">Valige linn: </label>
+                        <select name="linn" id="linn">
+                            <option value="">- Valige linn -</option>
+                            <option id="tln" value=0>Tallinn</option> <!-- 0€ --->
+                            <option id="trt" value=2.5>Tartu</option> <!-- 2.5€ --->
+                            <option id="nrv" value=2.5>Narva</option> <!-- 2.5€ --->
+                            <option id="prn" value=3>P&auml;rnu</option> <!-- 3€ --->
+                        </select>
+                    </div>
+                    <div id="maksemeetod-form">
+                        <p>
+                            <input type="radio" id="seb" name="maksemeetod" value="0">
+                            <label for="seb">SEB</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="lhv" name="maksemeetod" value="0">
+                            <label for="lhv">LHV</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="cc" name="maksemeetod" value="1">
+                            <label for="cc">MC/Visa</label>
+                        </p>
+                    </div>
+                    <div id="calc">
+                        <input type="submit" value="Arvuta tarne hind:" id="btn-delivery">
+                    </div>
+                    <div id="delivery"></div>
+                </form>
+            </section>
+            <hr>
+            <section id="section3">
+                <h3>3. osa: Kaart</h3>
+                <div id="map"></div>
+            </section>
+        </main>
+        <script type='text/javascript' src="script.js"></script>
+        <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=[Avslzl9rVgdKngc0zXAyS_1TvZCSS12q9aMqUv_CUdiD0YqcOGXqrEpRAuKj2WXi]' async defer></script>
+    </body>
+</html>
